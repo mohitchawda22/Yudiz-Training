@@ -19,29 +19,10 @@ function PrintGame(map) {
       if (cell.queens) {
         row += "Q ";
       } else {
-        switch (cell.color) {
-          case "red":
-            row += "R ";
-            break;
-          case "blue":
-            row += "B ";
-            break;
-          case "green":
-            row += "G ";
-            break;
-          case "yellow":
-            row += "Y ";
-            break;
-          case "orange":
-            row += "O ";
-            break;
-          default:
-            row += "- ";
-            break;
-        }
+        row += cell.color.toUpperCase()[0]+" ";
       }
+      console.log(row.trim());
     }
-    console.log(row.trim());
   }
 }
 
@@ -90,7 +71,7 @@ function PlacedQueens() {
         
       if (map.has(`${row},${col}`)) {
         let value = map.get(`${row},${col}`);
-        console.log(value);
+        // console.log(value);
         
         if (value.queens) {
           console.log("Queen already placed at this position");
