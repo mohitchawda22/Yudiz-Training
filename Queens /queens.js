@@ -19,10 +19,29 @@ function PrintGame(map) {
       if (cell.queens) {
         row += "Q ";
       } else {
-        row += cell.color.toUpperCase()[0]+" ";
+        switch (cell.color) {
+          case "red":
+            row += "R ";
+            break;
+          case "blue":
+            row += "B ";
+            break;
+          case "green":
+            row += "G ";
+            break;
+          case "yellow":
+            row += "Y ";
+            break;
+          case "orange":
+            row += "O ";
+            break;
+          default:
+            row += "- ";
+            break;
+        }
       }
-      console.log(row.trim());
     }
+    console.log(row.trim());
   }
 }
 
