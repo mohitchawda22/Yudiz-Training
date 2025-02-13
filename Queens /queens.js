@@ -1,6 +1,6 @@
 const readline = require("readline-sync");
 
-function createMatrix() {
+function createMap() {
   for (let i = 0; i < 5; i++) {
     for (let j = 0; j < 5; j++) {
       map.set(`${i},${j}`, { color: "red", queens: false });
@@ -8,6 +8,16 @@ function createMatrix() {
   }
 }
 const map = new Map();
+
+// const colors=[
+//   ["blue","blue","green","green","green"]
+//   ["blue","blue","green","green","green"],
+//   ["blue","blue","yellow","yellow","orange"],
+//   ["red","red","yellow","yellow","orange"],
+//   ["red","red","yellow","yellow","orange"],
+// ]
+
+const colors = ["green", "red", "blue", "yellow", "orange"];
 
 function PrintGame(map) {
   for (let i = 0; i < 5; i++) {
@@ -44,7 +54,16 @@ function PrintGame(map) {
     console.log(row.trim());
   }
 }
-
+function randomColor(colors) {
+  for (let i = 0; i < 5; i++) {
+    for (let j = 0; j < 5; j++) {
+      const key = `${i},${j}`;
+      const colorIndex = (i * 5 + j) % colors.length;
+      const color = colors[colorIndex];
+      map.set(key, { color });
+    }
+  }
+}
 {
   map.set("0,0", { color: "blue", queens: false });
   map.set("0,1", { color: "blue", queens: false });
@@ -87,11 +106,11 @@ function PlacedQueens() {
       let guess = readline.question(`Enter the Queens row and columns:`);
       let [row, col] = guess.split(",");
         // console.log([row,col]);
-        
+
       if (map.has(`${row},${col}`)) {
         let value = map.get(`${row},${col}`);
         // console.log(value);
-        
+
         if (value.queens) {
           console.log("Queen already placed at this position");
         } else if (rows.has(row) || cols.has(col) || colors.has(value.color)) {
@@ -117,6 +136,8 @@ function PlacedQueens() {
   PrintGame(map);
 }
 //  console.log(map);
+randomColor()
+console.log(map);
 
-PlacedQueens();
+// PlacedQueens();
 // PrintGame(map);
