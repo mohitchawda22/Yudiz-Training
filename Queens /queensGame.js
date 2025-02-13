@@ -4,7 +4,7 @@ const map = new Map();
 const GameMap=new Map()
 
 function makeBoard(n) {
-  const colors = ["green", "blue", "red", "yellow", "orange"];
+  const colors = ["🟢", "🔵", "🔴", "🟡 ", "🟠"];
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
       const randomColor = colors[Math.floor(Math.random() * colors.length)];
@@ -23,9 +23,9 @@ function PrintBoard(n,map) {
       const cell = map.get(`${i},${j}`);
 
       if (cell.hasQueen) {
-        row += "Q"+cell.color.toUpperCase()[0].padEnd(8)+' ';
+        row += "Q"+cell.color.padEnd(8)+' ';
       } else {
-        row += `${cell.color.toUpperCase()[0].padEnd(8)}`;
+        row += `${cell.color.padEnd(8)}`;
       }
     }
     console.log(row);
@@ -48,6 +48,7 @@ function isSafe(row, col, map, n) {
 
 function PlacedQueens(row, n, map) {
   if (row === n) {
+    console.log("===============This is one of the solution if you want to learn that so give this output:=============");
     PrintBoard(n, map);
     return true;
   }
