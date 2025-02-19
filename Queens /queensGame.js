@@ -12,7 +12,7 @@ function shuffleArray(array) {
 }
 
 function assignColors(i, j, n) {
-  const colorIndex = (i + j) % colors.length; // Assign color based on row and column index
+  const colorIndex = (i + j) % colors.length;
   return { hasQueen: false, color: colors[colorIndex] };
 }
 
@@ -36,9 +36,9 @@ function PrintBoard(n, map) {
       const cell = map.get(`${i},${j}`);
 
       if (cell.hasQueen) {
-        row += "♛" + cell.color+"   ";
+        row += "♛" + cell.color + "   ";
       } else {
-        row += cell.color+"   ";
+        row += cell.color + "   ";
       }
     }
     console.log(row);
@@ -59,52 +59,62 @@ function isSafe(row, col, map, n) {
   return true;
 }
 
-function overWiteColor(row, col, color, map, n) {
+function overWiteColor(row, col, queenColor, map, n) {
+
   const directions = [
-    [0, 1],
-    [1, 0],
-    [0, -1],
-    [-1, 0], // Horizontal and vertical // Diagonals
+    [0, 1], // right
+    [1, 0], // down
+    [0, -1], // left
+    [-1, 0], // up
+    [1, 1], // diagonal down-right
+    [1, -1], // diagonal down-left
+    [-1, 1], // diagonal up-right
+    [-1, -1], // diagonal up-left
   ];
-
+  map.set(`${row},${col}`, {
+    hasQueen: true,
+    color: queenColor,
+  });
   for (const [dx, dy] of directions) {
-    let x = row + dx;
-    let y = col + dy;
+    const x = row + dx;
+    const y = col + dy;
 
-    while (x >= 0 && x < n && y >= 0 && y < n) {
+    if (x >= 0 && x < n && y >= 0 && y < n) {
       const cell = map.get(`${x},${y}`);
       if (!cell.hasQueen) {
-        map.set(`${x},${y}`, { ...cell, color: color });
+        map.set(`${x},${y}`, {
+          hasQueen: false,
+          color: queenColor,
+        });
       }
-      x += dx;
-      y += dy;
     }
   }
 }
-
 function PlacedQueens(row, n, map) {
   if (row === n) {
-    console.log("===============This is one of the solution if you want to learn that so give this output:=============");
+    console.log(
+      "===============This is one of the solution if you want to learn that so give this output:============="
+    );
     PrintBoard(n, map);
     return true;
   }
-
-  let columns = Array.from({ length: n }, (_, i) => i);
+  let columns = [];
+  for (let i = 0; i < n; i++) {
+    columns.push(i);
+  }
   shuffleArray(columns);
 
   for (let col of columns) {
     if (isSafe(row, col, map, n)) {
-      const colorIndex = (row + col) % colors.length; // Assign color based on row and column index
-      const color = colors[colorIndex];
+      const color = colors[row % colors.length];
       map.set(`${row},${col}`, { hasQueen: true, color: color });
-
       overWiteColor(row, col, color, map, n);
-
       if (PlacedQueens(row + 1, n, map)) {
         return true;
       }
-
-      map.set(`${row},${col}`, { hasQueen: false, color: map.get(`${row},${col}`).color });
+      const resetColor = colors[(row + col) % colors.length];
+      map.set(`${row},${col}`, { hasQueen: false, color: resetColor });
+      overWiteColor(row, col, resetColor, map, n);
     }
   }
   return false;
@@ -125,7 +135,9 @@ function StartGame(n, GameMap) {
         if (value.hasQueen) {
           console.log("Queen already placed at this position.");
         } else if (!isSafe(row, col, GameMap, n)) {
-          console.log("Cannot place queen here due to row, column, or diagonal conflict.");
+          console.log(
+            "Cannot place queen here due to row, column, or diagonal conflict."
+          );
         } else {
           const colorIndex = (row + col) % colors.length; // Assign color based on row and column index
           const color = colors[colorIndex];
