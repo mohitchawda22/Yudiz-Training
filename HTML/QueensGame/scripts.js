@@ -1,51 +1,33 @@
 let boardSize = 0;
 const gameBoard = new Map();
-
+let regions = [];
 
 function isSafe(map, row, col, n) {
-  // Check horizontal
-  for (let j = 0; j < n; j++) {
-    if (map.get(`${row},${j}`) === "Q") return false;
-  }
-  // Check vertical
-  for (let i = 0; i < n; i++) {
-    if (map.get(`${i},${col}`) === "Q") return false;
-  }
-  // Check left diagonal
-  let i = row - 1
-  let j = col - 1;
-  while (i >= 0 && j >= 0) {
-    if (map.get(`${i},${j}`) === "Q") return false;
-    i--;
-    j--;
-  }
-  i=row+1
-  j=col+1
-  while(i<n && j<n){
-    if(map.get(`${i},${j}`)==="Q") return false
-    i++
-    j++
+  const directions = [
+    [-1, 0], // up
+    [1, 0],  // down
+    [0, -1], // left
+    [0, 1],  // right
+    [-1, -1], // upper left diagonal
+    [-1, 1],  // upper right diagonal
+    [1, -1],  // lower left diagonal
+    [1, 1]    // lower right diagonal
+  ];
+
+  for (let [dx, dy] of directions) {
+    const newRow = row + dx;
+    const newCol = col + dy;
+    if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < n) {
+      if (map.get(`${newRow},${newCol}`) === "Q") {
+        return false;
+      }
+    }
   }
 
-  // Check right diagonal
-  i = row - 1 
-  j = col + 1
-  while (i >= 0 && j < n) {
-    if (map.get(`${i},${j}`) === "Q") return false;
-    i--;
-    j++;
-  }
-  i=row+1
-  j=col-1
-  while(i<n && j>=0){
-    if(map.get(`${i},${j}`)==="Q") return false
-    i++
-    j--
-  }
   return true;
 }
 
-function getRandomNQueensSolution(n) {
+function RandomSolution(n) {
   let map = new Map();
   while (!solveNQueensDirect(map, n)) {
     map = new Map();
@@ -90,7 +72,17 @@ function QueenColor(board, n) {
       regions[i][j] = null;
     }
   }
-  const colors = ["red", "violet", "yellow", "green", "blue", "orange", "black", "pink", "brown"];
+  const colors = [
+    "red",
+    "violet",
+    "yellow",
+    "green",
+    "blue",
+    "orange",
+    "black",
+    "pink",
+    "brown",
+  ];
   let colorIndex = 0;
   for (let row = 0; row < n; row++) {
     for (let col = 0; col < n; col++) {
@@ -115,7 +107,6 @@ function getAvailableCells(regions, n) {
   return availableCells;
 }
 
-
 function pickRandomCell(availableCells) {
   let randomIndex = Math.floor(Math.random() * availableCells.length);
   return availableCells.splice(randomIndex, 1)[0];
@@ -129,7 +120,6 @@ function getNearColor(regions, row, col, n) {
     [0, -1],
     [0, 1],
     // [1, -1],
-    
   ];
   for (let [dx, dy] of directions) {
     let newRow = row + dx;
@@ -195,26 +185,32 @@ function placeQueen(event) {
   const col = parseInt(event.target.dataset.col);
 
   if (gameBoard.get(`${row},${col}`) === "Q") {
-    gameBoard.delete(`${row},${col}`)
-    event.target.textContent=""
-    event.target.textContent.remove("queen")
-  }if
-     (!isSafe(gameBoard, row, col, boardSize)) {
+    gameBoard.delete(`${row},${col}`);
+    event.target.textContent = "";
+    event.target.classList.remove("queen");
+  } else {
+    if (!isSafe(gameBoard, row, col, boardSize)) {
       alert("Invalid position! Queens cannot attack each other.");
       return;
-  }
-  if (isSafe(gameBoard, row, col, boardSize)) {
+    }
+    for (let [key] of gameBoard.entries()) {
+      let [r, c] = key.split(",").map(Number);
+      if (regions[r][c] === regions[row][col]) {
+        alert("This region already contains a queen of the same color.");
+        return;
+      }
+    }
     gameBoard.set(`${row},${col}`, "Q");
-        event.target.textContent = "👑";
-        event.target.classList.add("queen");
-    }
-
-    if (gameBoard.size === boardSize) {
-      alert("Congratulations! You've successfully placed all queens.");
-      return 
-    }
+    event.target.textContent = "👑";
+    event.target.classList.add("queen");
   }
 
+  if (gameBoard.size === boardSize) {
+    setTimeout(() => {
+      alert("Congratulations! You've successfully placed all queens.");
+    }, 500);
+  }
+}
 
 function startGame() {
   boardSize = parseInt(document.getElementById("boardsize").value);
@@ -224,10 +220,9 @@ function startGame() {
   }
 
   gameBoard.clear();
-  const board = getRandomNQueensSolution(boardSize);
-  let regions = QueenColor(board, boardSize);
+  const board = RandomSolution(boardSize);
+  regions = QueenColor(board, boardSize);
   regions = fillRegions(regions, boardSize);
   generateGrid(boardSize, regions);
   console.log(board);
-  
 }
