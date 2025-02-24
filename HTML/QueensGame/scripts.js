@@ -19,12 +19,28 @@ function isSafe(map, row, col, n) {
     i--;
     j--;
   }
+  i=row+1
+  j=col+1
+  while(i<n && j<n){
+    if(map.get(`${i},${j}`)==="Q") return false
+    i++
+    j++
+  }
+
   // Check right diagonal
-  (i = row - 1), (j = col + 1);
+  i = row - 1 
+  j = col + 1
   while (i >= 0 && j < n) {
     if (map.get(`${i},${j}`) === "Q") return false;
     i--;
     j++;
+  }
+  i=row+1
+  j=col-1
+  while(i<n && j>=0){
+    if(map.get(`${i},${j}`)==="Q") return false
+    i++
+    j--
   }
   return true;
 }
@@ -112,7 +128,8 @@ function getNearColor(regions, row, col, n) {
     [-1, 0],
     [0, -1],
     [0, 1],
-    [1, -1],
+    // [1, -1],
+    
   ];
   for (let [dx, dy] of directions) {
     let newRow = row + dx;
@@ -194,6 +211,7 @@ function placeQueen(event) {
 
     if (gameBoard.size === boardSize) {
       alert("Congratulations! You've successfully placed all queens.");
+      return 
     }
   }
 
