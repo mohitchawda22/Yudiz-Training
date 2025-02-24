@@ -3,6 +3,13 @@ const gameBoard = new Map();
 let regions = [];
 
 function isSafe(map, row, col, n) {
+  
+  for (let i = 0; i < n; i++) {
+    if (map.get(`${row},${i}`) === "Q" || map.get(`${i},${col}`) === "Q") {
+      return false;
+    }
+  }
+
   const directions = [
     [-1, 0], // up
     [1, 0],  // down
@@ -183,6 +190,7 @@ function generateGrid(boardSize, regions = null) {
 function placeQueen(event) {
   const row = parseInt(event.target.dataset.row);
   const col = parseInt(event.target.dataset.col);
+  const result=document.getElementById("result")
 
   if (gameBoard.get(`${row},${col}`) === "Q") {
     gameBoard.delete(`${row},${col}`);
@@ -190,13 +198,13 @@ function placeQueen(event) {
     event.target.classList.remove("queen");
   } else {
     if (!isSafe(gameBoard, row, col, boardSize)) {
-      alert("Invalid position! Queens cannot attack each other.");
+      result.innerHTML="Invalid position! Queens cannot attack each other."
       return;
     }
     for (let [key] of gameBoard.entries()) {
       let [r, c] = key.split(",").map(Number);
       if (regions[r][c] === regions[row][col]) {
-        alert("This region already contains a queen of the same color.");
+        result.innerHTML="This region already contains a queen of the same color."
         return;
       }
     }
@@ -207,8 +215,9 @@ function placeQueen(event) {
 
   if (gameBoard.size === boardSize) {
     setTimeout(() => {
-      alert("Congratulations! You've successfully placed all queens.");
-    }, 500);
+      result.style.color="green"
+      result.innerHTML="Congratulations🥳! You've successfully placed all queens."
+    }, 300);
   }
 }
 
