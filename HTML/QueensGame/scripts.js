@@ -195,21 +195,26 @@ function placeQueen(event) {
   if (gameBoard.get(`${row},${col}`) === "Q") {
     gameBoard.delete(`${row},${col}`);
     event.target.textContent = "";
+    result.innerHTML=""
     event.target.classList.remove("queen");
   } else {
     if (!isSafe(gameBoard, row, col, boardSize)) {
+      result.style.color="red"
       result.innerHTML="Invalid position! Queens cannot attack each other."
       return;
     }
     for (let [key] of gameBoard.entries()) {
       let [r, c] = key.split(",").map(Number);
       if (regions[r][c] === regions[row][col]) {
+        result.style.color="red"
         result.innerHTML="This region already contains a queen of the same color."
         return;
       }
     }
     gameBoard.set(`${row},${col}`, "Q");
     event.target.textContent = "👑";
+    result.innerHTML=""
+    event.target.style.fontSize="24px"
     event.target.classList.add("queen");
   }
 
