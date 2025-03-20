@@ -1,0 +1,35 @@
+
+.ill-img{
+    max-width: 100%;
+    height: auto;
+}
+
+$orange:#F53855;
+$btn:#F53838;
+$text-color:#fffffe;
+
+.signUp{
+    border: 2px solid $orange;
+    border-radius: 50px;
+    padding: 1px 45px;
+    color: $btn;
+}
+
+.get-Started{
+    background-color: $btn;
+    color: $text-color;
+    width: 250px;
+    height: 85px;
+    padding: 17px 75px;
+    text-decoration: none;
+}
+
+.fs{
+    font-size: 50px;
+}
+
+.user{
+    padding: 50px 20px;
+    box-shadow: 0 42px 114px 0 rgba(13,16,37,0.064);
+}
+

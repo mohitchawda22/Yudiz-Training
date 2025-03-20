@@ -1,0 +1,29 @@
+.ill-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.signUp {
+  border: 2px solid #F53855;
+  border-radius: 50px;
+  padding: 1px 45px;
+  color: #F53838;
+}
+
+.get-Started {
+  background-color: #F53838;
+  color: #fffffe;
+  width: 250px;
+  height: 85px;
+  padding: 17px 75px;
+  text-decoration: none;
+}
+
+.fs {
+  font-size: 50px;
+}
+
+.user {
+  padding: 50px 20px;
+  box-shadow: 0 42px 114px 0 rgba(13, 16, 37, 0.064);
+}/*# sourceMappingURL=style.css.map */

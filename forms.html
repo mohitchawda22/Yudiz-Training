@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<style>
+    input {
+        margin: 5px;
+        padding: 5px;
+    }
+</style>
+
+<body style="background-color: lavender; text-align: left;">
+    <fieldset>
+        <legend>Registration Form</legend>
+        <form action="submit" method="post" style="margin-left: 20px; padding:auto;">
+            <label style="padding: auto;">Enter Full Name:
+                <input type="text" name="name" placeholder="Enter your full name" required autofocus />
+            </label>
+            <br <label for="input">Email:
+            <input type="email" name="email" placeholder="Enter your email" required autofocus />
+            </label>
+            <br>
+            <label for="input">Password:
+                <input type="password" name="password" placeholder="Enter your password" required autofocus />
+            </label>
+            <br>
+            <label> Gender:-
+                <input type="checkbox" name"Male">Male</input>
+                <input type="checkbox" name="Female">Female</input>
+            </label>
+            <p>D.O.B:-
+                <input type="date" name="DOB" required autofocus />
+            </p>
+            <p>Age:-
+                <input type="number" name="Age" placeholder="Enter yor age" required autofocus min="0" />
+            </p>
+            <label style="display: flex;">Address:-
+                <textarea name="Address" placeholder="Enter your address" required autofocus>
+                </textarea>
+            </label>
+
+            <p>Country:-
+                <select name="Country" required autofocus>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    <option value="Australia">Australia</option>
+                </select>
+            </p>
+            <p>State:-
+                <select name="State" required autofocus>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Punjab">Punjab</option>
+                </select>
+            </p>
+            <p>City:-
+                <select name="City" required autofocus>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Ahmedabad">Ahmedabad</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    
+                </select>
+            </p>
+            <p>Pincode:-
+                <input type="number" name="Pincode" placeholder="Enter your pincode" required autofocus min="0" />
+            </p>
+            <input type="submit" name="submit">
+            <input type="reset" name="reset">
+        </form>
+    </fieldset>
+</body>
+
+</html>
