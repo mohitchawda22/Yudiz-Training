@@ -1,31 +1,51 @@
-const time=document.getElementById("Time")
+const time = document.getElementById("time")
+const btn1 = document.querySelector(".btn1")
+const btn2 = document.querySelector(".btn2")
+const btn3 = document.querySelector(".btn3")
+const btn4 = document.querySelector(".btn4")
+const btn5 = document.querySelector(".btn5")
+console.log(btn1);
 
 
 
-// console.log(utc_time);
+let indiaTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata" });
+let indiautc=new Date().toUTCString("en-US", { timeZone: "Asia/Kolkata" })
 
-function getValue(){
-    const utc_time=document.getElementsByClassName("utc")[0].value
-    console.log(utc_time);
-    const location=document.getElementsByClassName("location")[0].value
-    console.log(location);
-    const format=document.getElementsByClassName("format")[0].value
-    console.log(format);
-    
-}
-getValue()
+let londonTime = new Date().toLocaleString("en-US", { timeZone: "Europe/London" });
+let londonutc=new Date().toUTCString("en-US", { timeZone: "Europe/London" })
 
 let tokyoTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Tokyo" });
-console.log("Current Time in Tokyo: " + tokyoTime);
- 
-// Convert Tokyo time to London time
-let londonTime = new Date(tokyoTime).toLocaleString("en-US", { timeZone: "Europe/London" });
-console.log("Corresponding Time in London: " + londonTime);
+let tokyoutc=new Date().toUTCString("en-US", { timeZone: "Asia/Tokyo" })
 
-function generateTime(utc_time,location,format){
-    
-    
+let new_YorkTime = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
+let new_Yorkutc=new Date().toUTCString("en-US", { timeZone: "America/New_York" })
 
-    
-}
+let sydneyTime = new Date().toLocaleString("en-US", { timeZone: "Australia/Sydney" });
+let sydneyutc=new Date().toUTCString("en-US", { timeZone: "Australia/Sydney" })
 
+
+
+
+
+btn1.addEventListener("click",function(){
+    time.innerHTML=`${indiaTime} <br>
+    ${indiautc}`
+})
+btn5.addEventListener("click",function(){
+    time.innerHTML=`${new_YorkTime} <br>
+    ${new_Yorkutc}`
+})
+btn3.addEventListener("click",function(){
+    time.innerHTML=`${tokyoTime} <br>
+    ${tokyoutc}`
+})
+btn4.addEventListener("click",function(){
+    time.innerHTML=`${londonTime} <br> ${londonutc}`
+})
+btn2.addEventListener("click",function(){
+    time.innerHTML=`${sydneyTime} <br> ${sydneyutc}`
+})
+
+
+
+// India()

@@ -5,8 +5,18 @@
 }
 
 .main {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
+}
+.main .btns {
+  display: flex;
+  padding: 2rem;
+}
+.main .btns button {
+  padding: 1rem;
+  margin: 2px;
+  background-color: burlywood;
 }/*# sourceMappingURL=style.css.map */
