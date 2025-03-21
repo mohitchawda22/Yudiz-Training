@@ -1,0 +1,103 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ill-img {
+  padding-left: 100px;
+}
+
+.hero {
+  background: #F5F7FA;
+}
+
+.login-btn {
+  color: #43A046;
+  text-decoration: none;
+}
+
+.signIn-btn {
+  color: #FFFFFF;
+  text-decoration: none;
+  background-color: #43A046;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+}
+
+.button {
+  color: #FFFFFF;
+  text-decoration: none;
+  background: #43A046;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+}
+
+.ps {
+  padding: 20px;
+}
+
+.fs {
+  padding: 50px;
+}
+.fs h1 {
+  font-size: 64px;
+  line-height: 76px;
+  color: #4D4D4D;
+}
+.fs span {
+  color: #43A046;
+}
+.fs p {
+  line-height: 24px;
+  color: #717171;
+}
+
+.slick-dots {
+  position: static !important;
+}
+.slick-dots li button:before {
+  font-size: 10px !important;
+}
+.slick-dots li.slick-active button:before {
+  color: #43A046 !important;
+}
+
+.client-container {
+  padding: 20px 0px;
+}
+.client-container h1 {
+  font-size: 36px;
+  line-height: 44px;
+  color: #4D4D4D;
+}
+.client-container p {
+  line-height: 24px;
+  color: #717171;
+}
+
+.community-container {
+  padding: 20px 0px;
+}
+.community-container h1 {
+  font-size: 36px;
+  line-height: 44px;
+  width: 542px;
+  height: 88px;
+  text-align: center;
+  color: #4D4D4D;
+}
+.community-container p {
+  line-height: 24px;
+  color: #717171;
+}
+.community-container img {
+  width: 65px;
+  height: 56px;
+}/*# sourceMappingURL=style.css.map */

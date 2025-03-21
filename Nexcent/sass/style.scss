@@ -1,0 +1,113 @@
+@import "colors";
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ill-img{
+    padding-left: 100px;
+}
+
+.hero{
+    background: $silver;
+}
+
+.login-btn {
+    color: $shade1 ;
+    text-decoration: none;
+}
+
+.signIn-btn {
+    color: $white;
+    text-decoration: none;
+    background-color: $shade1;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+}
+
+.button{
+    color: $white;
+    text-decoration: none;
+    background: $shade1;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+}
+
+.ps{
+    padding: 20px;
+}
+
+.fs {
+    padding:50px;
+    h1 {
+        font-size: 64px;
+        line-height: 76px;
+        color: $d-grey;
+    }
+
+    span {
+        color: $shade1;
+    }
+
+    p {
+        line-height: 24px;
+        color: $grey;
+    }
+}
+
+.slick-dots{
+    position: static !important;
+
+    li button:before{
+        font-size: 10px !important;
+    }
+
+    li.slick-active button:before{
+        color: $shade1 !important;
+    }
+}
+
+.client-container {
+    padding:20px 0px ;
+    h1{
+        font-size: 36px;
+        line-height: 44px;
+        color: $d-grey;
+    }
+    p{
+        line-height: 24px;
+        color: $grey;
+    }
+    
+}
+
+.community-container{
+    padding: 20px 0px;
+
+    h1{
+        font-size: 36px;
+        line-height: 44px;
+        width: 542px;
+        height: 88px;
+        text-align: center;
+        color: $d-grey;
+    }
+    p{
+        line-height: 24px;
+        color: $grey;
+    }
+
+    img{
+        width: 65px;
+        height: 56px;
+    }
+}
+
