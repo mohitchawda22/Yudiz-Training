@@ -10,10 +10,6 @@ img {
   height: auto;
 }
 
-.ill-img {
-  padding-left: 100px;
-}
-
 .hero {
   background: #F5F7FA;
 }
@@ -37,10 +33,6 @@ img {
   background: #43A046;
   padding: 1rem 2rem;
   border-radius: 6px;
-}
-
-.ps {
-  padding: 20px;
 }
 
 .fs {
@@ -69,9 +61,6 @@ img {
   color: #43A046 !important;
 }
 
-.client-container {
-  padding: 20px 0px;
-}
 .client-container h1 {
   font-size: 36px;
   line-height: 44px;
@@ -88,8 +77,8 @@ img {
 .community-container h1 {
   font-size: 36px;
   line-height: 44px;
-  width: 542px;
-  height: 88px;
+  max-width: 542px;
+  height: auto;
   text-align: center;
   color: #4D4D4D;
 }
@@ -100,4 +89,74 @@ img {
 .community-container img {
   width: 65px;
   height: 56px;
+}
+
+.member-card {
+  box-shadow: rgba(171, 190, 209, 0.2) 0px 2px 10px 0px;
+}
+.member-card div {
+  width: 299px;
+  height: 260px;
+}
+.member-card img {
+  padding-bottom: 16px;
+}
+.member-card h1 {
+  width: 267px;
+  height: 72px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 36px;
+  color: #4D4D4D;
+}
+.member-card p {
+  padding-top: 8px;
+  width: 251px;
+  height: 60px;
+  text-align: center;
+  font-size: 14px;
+  color: #717171;
+  line-height: 20px;
+}
+
+.sp-container h1 {
+  font-size: 36px;
+  line-height: 44px;
+  color: #4D4D4D;
+}
+.sp-container p {
+  color: #717171;
+  line-height: 20px;
+  font-size: 14px;
+  padding-top: 16px;
+  padding-bottom: 32px;
+}
+
+.sp {
+  background: #F5F7FA;
+}
+.sp img {
+  max-width: 48px;
+  height: auto;
+}
+
+.sp3 div p {
+  font-size: 28px;
+  color: #4D4D4D;
+  line-height: 36px;
+}
+
+.sp-container2 h1 {
+  font-size: 36px;
+  line-height: 44px;
+  color: #4D4D4D;
+}
+.sp-container2 span {
+  font-size: 36px;
+  line-height: 44px;
+  color: #43A046;
+}
+.sp-container2 p {
+  line-height: 24px;
+  color: #263238;
 }/*# sourceMappingURL=style.css.map */
