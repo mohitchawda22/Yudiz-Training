@@ -227,7 +227,7 @@ img {
 
 .abs {
   position: relative;
-  margin: -80px 40px 34px 26px;
+  margin: -80px 34px 36px 16px;
   background: #F5F7FA;
   border-radius: 8px;
   text-align: center;
@@ -307,5 +307,8 @@ img {
     line-height: 18px;
     font-size: 12px;
     padding-top: 8px;
+  }
+  .abs {
+    margin: -80px 36px 34px;
   }
 }/*# sourceMappingURL=style.css.map */

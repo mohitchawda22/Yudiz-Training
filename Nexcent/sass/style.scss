@@ -294,7 +294,7 @@ img {
     // max-width: 317px;
     // height: auto;
     position: relative;
-    margin:-80px 40px 34px 26px;
+    margin:-80px 34px 36px 16px;
     background: $silver;
     border-radius: 8px;
     // position: absolute;
@@ -412,6 +412,10 @@ img {
             font-size: 12px;
             padding-top: 8px;
         }
+    }
+
+    .abs{
+        margin:-80px 36px 34px;
     }
 
 }
