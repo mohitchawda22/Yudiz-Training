@@ -166,6 +166,14 @@ img {
             font-size: 28px;
             color: $d-grey;
             line-height: 36px;
+            font-weight: 700;
+
+            span{
+                font-weight: 400px;
+                color: $grey;
+                font-size: 16px;
+                line-height: 24px;
+            }
         }
     }
 }
@@ -184,4 +192,102 @@ img {
         line-height: 24px;
         color: $black;
     }
+}
+
+.sp4{
+    h1{
+        line-height: 44px;
+        font-size: 36px;
+        color: $d-grey;
+    }
+    p{
+        font-size: 14px;
+        line-height: 20px;
+        color: $grey;
+    }
+}
+
+.sp5{
+    background: $silver;
+    p{
+        line-height: 24px;
+        color: $grey;
+    }
+    h1{
+        line-height: 28px;
+        font-size: 20px;
+        color: $shade1;
+    }
+    span{
+        line-height: 24px;
+        color: $l-grey;
+    }
+    ul{
+        // padding-top: 2rem;
+
+        li{
+            list-style: none;
+        }
+
+        a{
+            color: $shade1;
+            font-size: 20px;
+            line-height: 28px;
+            text-decoration: none;
+        }
+
+        a:hover{
+            transform: translateX(10px);
+            transition: 0.5s all ease-in-out;
+        }
+    }
+}
+
+.sp6{
+    h1{
+        font-size: 36px;
+        line-height: 44px;
+        color: $d-grey;
+        text-align: center;
+    }
+    p{
+        line-height: 24px;
+        color: $grey;
+        text-align: center;
+        max-width: 628px;
+    }
+}
+
+.divv{
+    position: relative;
+}
+.abs{
+    max-width: 317px;
+    height: auto;
+    background: $silver;
+    border-radius: 8px;
+    position: absolute;
+    top: 60%;
+    left: 36px;
+    text-align: center;
+    box-shadow: #ABBED166 0px 10px 8px 0px ;
+    h1{
+        font-weight: 600px;
+        font-size: 20px;
+        line-height: 28px;
+        color: $d-grey;
+        padding-bottom: 1rem;
+    }
+    a{
+        
+        font-size: 20px;
+        line-height: 28px;
+        color: $shade1;
+        text-decoration: none;
+    }
+}
+
+.divv:hover{
+    transform: translateY(-10px);
+    transition: 0.5s all ease-in-out;
 }
