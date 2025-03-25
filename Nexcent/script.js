@@ -12,13 +12,13 @@ const heroContainer = document.querySelector(".hero-container");
 cardData.map(card => {
   const cardElement = document.createElement("div");
   const cardContent = `
-      <div class="row d-flex align-content-center justify-content-between ps ">
-                <div class=" col-md-12 col-lg-7 fs">
+      <div class="row ps">
+                <div class="col-md-12 col-lg-7 slider-desc">
                     <h1 class="fw-bold w-100 fw-semibold">${card.title}<span class="">${card.spantitle}</span></h1>
                     <p class="pb-2 pt-2 fw-normal">${card.description}</p>
                     <a href="" class="fw-bold button">Register</a>
                 </div>
-                <div class=" col-md-12 col-lg-5 pt-xs-0 ill-img placeholder-glow">
+                <div class="col-md-12 col-lg-5 pt-xs-0 ill-img placeholder-glow">
                     <img src="${card.imageUrl}" alt="" class="ill-img " id="my-Image">
                 </div>
             </div>
