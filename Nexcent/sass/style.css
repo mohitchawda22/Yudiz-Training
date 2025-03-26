@@ -140,6 +140,7 @@ img {
 .business-container {
   background: #F5F7FA;
 }
+
 .sp3 div p {
   font-size: 28px;
   color: #4D4D4D;
@@ -252,6 +253,33 @@ img {
   transition: 0.5s all ease-in-out;
 }
 
+.section {
+  background: #F5F7FA;
+  padding: 2rem 0rem;
+}
+.section h1 {
+  font-size: 64px;
+  line-height: 76px;
+  color: #263238;
+  padding-bottom: 1rem;
+}
+
+.footer {
+  padding: 4rem 0rem;
+  background: #263238;
+}
+.footer p {
+  color: #FFFFFF;
+  margin: 0rem !important;
+}
+.footer span {
+  color: #FFFFFF;
+}
+
+.footer-desc h2 {
+  color: #FFFFFF;
+}
+
 @media (max-width: 760px) {
   .slider-desc h1 {
     font-size: 36px;
@@ -310,5 +338,13 @@ img {
   }
   .abs {
     margin: -80px 36px 34px;
+  }
+  .section {
+    padding: 0 !important;
+  }
+  .section h1 {
+    font-size: 36px;
+    line-height: 44px;
+    padding-bottom: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
