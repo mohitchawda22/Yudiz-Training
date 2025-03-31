@@ -1,0 +1,255 @@
+@import "color";
+// @import "typo";
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Manrope", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1280px !important;
+}
+
+.dropdown:first-child {
+    a {
+        color: $primary-500;
+    }
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.dropdown a:hover {
+    color: $primary-500;
+}
+
+.dropdown {
+    a {
+        color: $shade-100;
+    }
+}
+
+.navbar-toggler-icon {
+    background-image: url("/HouseFix/public/hamburger.svg") !important;
+    z-index: 999;
+}
+
+// .navbar-collapse{
+//         position: fixed;
+//         align-items: center;
+//         gap: 40px;
+//         top: 0;
+//         right: 0;
+//         background: white;
+//         border: 1px solid black;
+//         box-shadow: var(--heading-color) 0px 20px 20px 0px;
+//         height: 100%;
+//         flex-direction: column;
+//         width: 100%;
+//         padding: 50px;
+//         transform: translateX(1000px);
+//         transition: 0.5s;
+//         z-index: 100;
+// }
+
+.navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    // display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    transform: translateX(1000px);
+    transition: 0.5s all;
+    padding-top: 80px;
+    z-index: 100;
+}
+
+.navbar-collapse.show {
+    right: 0;
+}
+
+.navbar-toggler {
+    z-index: 999;
+}
+
+.contact-banner {
+    display: none;
+}
+
+.contact-banner {
+    background: $primary-900;
+
+    p {
+        color: $shade-0;
+    }
+
+    a {
+        text-decoration: none;
+        color: $shade-0;
+    }
+}
+
+.call-button {
+    padding: 14px 32px;
+    background: $primary-500;
+    color: $shade-0;
+    border-radius: 4px;
+}
+
+.job-button {
+    padding: 20px 40px;
+    background: $primary-500;
+    color: $shade-0;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.pricing-btn {
+    padding: 20px 40px;
+    background: transparent;
+    color: $shade-0;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 2px solid $primary-500;
+}
+
+.call-button:hover {
+    transform: translateY(-2px);
+    transition: 0.5s all ease-in-out;
+}
+
+.hero-container {
+    background-image: url("/HouseFix/public/body.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1 {
+        font-weight: 800;
+        color: $shade-0;
+        font-size: 48px;
+        line-height: 58px;
+        padding-bottom: 40px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        color: $shade-0;
+        padding-bottom: 40px;
+    }
+}
+
+.services-container {
+    .d-flex {
+        padding-bottom: 20px;
+
+        h1 {
+            font-size: 18px;
+            line-height: 23px;
+            color: $primary-500;
+        }
+    }
+
+    .text-center {
+        h1 {
+            line-height: 48px;
+            color: $primary-800;
+            font-weight: 800;
+            padding-bottom: 40px;
+        }
+    }
+}
+
+.card-bottom {
+    padding-bottom: 24px;
+}
+
+.card-body {
+    padding: 20px;
+    background: $primary-50;
+
+    h5 {
+        color: $neutral-900;
+    }
+
+    p {
+        color: $primary-800;
+    }
+
+    a {
+        color: $primary-800;
+    }
+}
+
+
+
+@media(min-width:768px) and (max-width:991px) {
+    .hero-container {
+        text-align: center;
+
+        h1 {
+            font-weight: 800;
+            color: $shade-0;
+            font-size: 40px;
+            line-height: 48px;
+            padding-bottom: 32px;
+        }
+
+        p {
+            padding-bottom: 32px;
+        }
+
+        .buttons {
+            justify-content: center;
+        }
+    }
+}
+
+@media (min-width:320px) and (max-width:767px) {
+   .hero-container {
+        text-align: center;
+
+        h1 {
+            font-weight: 800;
+            color: $shade-0;
+            font-size: 32px;
+            line-height: 40px;
+            padding-bottom: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 20px;
+            padding-bottom: 24px;
+        }
+
+        .buttons {
+            flex-direction: column;
+            gap: 12px;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+// heading variables
+
+@mixin h1{
+    font-size: 48px;
+    line-height: 58px;
+}
+
+@mixin h1-small{
+    font-size: 40px;
+    line-height: 48px;
+}
+
+@mixin h2{
+    font-size: 36px;
+    line-height: 44px;
+}
+
+@mixin h2-small{
+    font-size: 32px;
+    line-height: 40px;
+}
+
+@mixin h3{
+    font-size: 28px;
+    line-height: 34px;
+}
+
+@mixin h4{
+    font-size: 24px;
+    line-height: 30px;
+}
+
+@mixin h4-small{
+    font-size: 20px;
+    line-height: 24px;
+}
+
+@mixin h5{
+    font-size: 18px;
+    line-height: 23px;
+}
+
+@mixin h5-small{
+    font-size: 16px;
+    line-height: 19px;
+}
+
+//paragraph variables
+
+@mixin p1{
+    font-size: 18px;
+    line-height: 23px;
+}
+
+@mixin p2{
+    font-size: 16px;
+    line-height: 19px;
+}
+
+@mixin p3{
+    font-size: 14px;
+    line-height: 18px;
+}
+
+@mixin p4{
+    font-size: 12px;
+    line-height: 15px;
+}

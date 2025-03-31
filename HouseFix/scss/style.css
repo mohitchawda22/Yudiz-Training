@@ -1,0 +1,207 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Manrope", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1280px !important;
+}
+
+.dropdown:first-child a {
+  color: #2196F3;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown a:hover {
+  color: #2196F3;
+}
+
+.dropdown a {
+  color: #000000;
+}
+
+.navbar-toggler-icon {
+  background-image: url("/HouseFix/public/hamburger.svg") !important;
+  z-index: 999;
+}
+
+.navbar-collapse {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  transform: translateX(1000px);
+  transition: 0.5s all;
+  padding-top: 80px;
+  z-index: 100;
+}
+
+.navbar-collapse.show {
+  right: 0;
+}
+
+.navbar-toggler {
+  z-index: 999;
+}
+
+.contact-banner {
+  display: none;
+}
+
+.contact-banner {
+  background: #000E24;
+}
+.contact-banner p {
+  color: #FFFFFF;
+}
+.contact-banner a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.call-button {
+  padding: 14px 32px;
+  background: #2196F3;
+  color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.job-button {
+  padding: 20px 40px;
+  background: #2196F3;
+  color: #FFFFFF;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.pricing-btn {
+  padding: 20px 40px;
+  background: transparent;
+  color: #FFFFFF;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 2px solid #2196F3;
+}
+
+.call-button:hover {
+  transform: translateY(-2px);
+  transition: 0.5s all ease-in-out;
+}
+
+.hero-container {
+  background-image: url("/HouseFix/public/body.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-container h1 {
+  font-weight: 800;
+  color: #FFFFFF;
+  font-size: 48px;
+  line-height: 58px;
+  padding-bottom: 40px;
+}
+.hero-container p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+  padding-bottom: 40px;
+}
+
+.services-container .d-flex {
+  padding-bottom: 20px;
+}
+.services-container .d-flex h1 {
+  font-size: 18px;
+  line-height: 23px;
+  color: #2196F3;
+}
+.services-container .text-center h1 {
+  line-height: 48px;
+  color: #00296C;
+  font-weight: 800;
+  padding-bottom: 40px;
+}
+
+.card-bottom {
+  padding-bottom: 24px;
+}
+
+.card-body {
+  padding: 20px;
+  background: #F4F8FF;
+}
+.card-body h5 {
+  color: #11141B;
+}
+.card-body p {
+  color: #00296C;
+}
+.card-body a {
+  color: #00296C;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-container {
+    text-align: center;
+  }
+  .hero-container h1 {
+    font-weight: 800;
+    color: #FFFFFF;
+    font-size: 40px;
+    line-height: 48px;
+    padding-bottom: 32px;
+  }
+  .hero-container p {
+    padding-bottom: 32px;
+  }
+  .hero-container .buttons {
+    justify-content: center;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .hero-container {
+    text-align: center;
+  }
+  .hero-container h1 {
+    font-weight: 800;
+    color: #FFFFFF;
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 24px;
+  }
+  .hero-container p {
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 24px;
+  }
+  .hero-container .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+}/*# sourceMappingURL=style.css.map */
