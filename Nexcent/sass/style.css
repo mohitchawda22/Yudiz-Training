@@ -28,6 +28,10 @@ img {
   text-decoration: none;
 }
 
+.login-btn:hover {
+  text-decoration: underline;
+}
+
 .signIn-btn {
   color: #FFFFFF;
   text-decoration: none;
@@ -36,12 +40,28 @@ img {
   border-radius: 6px;
 }
 
+.s-btn:hover {
+  transform: translateY(-5px);
+  transition: 0.5s ease-in-out all;
+}
+
+a:hover {
+  transform: translateY(-8px);
+  transition: 0.5s ease-in-out all;
+}
+
 .button {
   color: #FFFFFF;
   text-decoration: none;
   background: #43A046;
   padding: 1rem 2rem;
   border-radius: 6px;
+}
+
+button:hover {
+  transform: translateY(-5rem);
+  transition: 0.5s all ease-in-out;
+  box-shadow: #43A046 0px 2px 10px 0px;
 }
 
 .slider-desc {
@@ -228,14 +248,13 @@ img {
 
 .abs {
   position: relative;
-  margin: -80px 34px 36px 16px;
+  margin: -80px 32px 0px 16px;
   background: #F5F7FA;
   border-radius: 8px;
   text-align: center;
   box-shadow: rgba(171, 190, 209, 0.4) 0px 10px 8px 0px;
 }
 .abs h1 {
-  font-weight: 600px;
   font-size: 20px;
   line-height: 28px;
   color: #4D4D4D;
@@ -278,9 +297,60 @@ img {
 
 .footer-desc h2 {
   color: #FFFFFF;
+  font-size: 20px;
+  padding-bottom: 24px;
+}
+.footer-desc p {
+  padding-bottom: 12px;
+  font-size: 14px;
 }
 
-@media (max-width: 760px) {
+.input-container {
+  position: relative;
+  width: 250px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  background-color: #666262;
+  padding: 5px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+}
+
+.input-container input::-moz-placeholder {
+  color: #ccc;
+}
+
+.input-container input::placeholder {
+  color: #ccc;
+}
+
+.input-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.input-container button svg {
+  fill: #ccc;
+  width: 18px;
+  height: 18px;
+}
+
+.input-container button:hover svg {
+  fill: #fff;
+}
+
+@media (max-width: 768px) {
   .slider-desc h1 {
     font-size: 36px;
     line-height: 44px;
@@ -337,10 +407,7 @@ img {
     padding-top: 8px;
   }
   .abs {
-    margin: -80px 36px 34px;
-  }
-  .section {
-    padding: 0 !important;
+    margin: -76px 12px 36px 12px;
   }
   .section h1 {
     font-size: 36px;
