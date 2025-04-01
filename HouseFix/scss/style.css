@@ -96,7 +96,7 @@ img {
 }
 
 .hero-container {
-  background-image: url("/HouseFix/public/body.jpeg");
+  background-image: url("https://s3-alpha-sig.figma.com/img/60fd/11b0/9da95f4035ddbae124e8946e7a732ed0?Expires=1744588800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=RvOUT9q1~ptCFTwk~hkZD0Zm5pL0cT63-zbq6hhkRAxThmitE7CzM~kuUqY3lOmGLGELDdQnO9Yb94drnOHcpdrqWgJwZxJiImYx9mCc1L3hXIPvRqiiw4bA3CZL8euVYO0YSSHdxWm-GqN5dTjPMAWtv3QwtYST01HhYPcrDfIOzBMh7hJzPJsE8Dy5UiXFuYMQd-NeWjIdkGVLEbsUnZ8i49SAyahtsnIfJ2KGQX0A8ZMrPD~5dAPTabsR1bRUo~-ZLs8VQA1Ljxp-YzN8-2K5X5pL6iHT8iBCD7okUxAzB0qn5adGzxXbFjswjg04UbVv6p5rf41GGR0xCGVp2Q__");
   background-repeat: no-repeat;
   background-size: cover;
 }
