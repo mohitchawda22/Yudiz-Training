@@ -5,7 +5,7 @@
     padding: 0%;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 img {
@@ -60,11 +60,11 @@ a:hover{
     border-radius: 6px;
     
 }
-button:hover{
-    transform: translateY(-5rem);
-    transition: 0.5s all ease-in-out;
-    box-shadow: $shade1 0px 2px 10px 0px;
-}
+// button:hover{
+//     transform: translateY(-5rem);
+//     transition: 0.5s all ease-in-out;
+//     box-shadow: $shade1 0px 2px 10px 0px;
+// }
 
 .slider-desc {
     padding: 50px;
@@ -145,7 +145,7 @@ button:hover{
 }
 
 .member-card {
-    box-shadow: #ABBED133 0px 2px 10px 0px;
+    box-shadow: #ABBED133 0px 4px 20px 0px;
 
     img {
         padding-bottom: 16px;
@@ -300,8 +300,9 @@ button:hover{
 }
 
 .abs {
+    max-width: 317px;
     position: relative;
-    margin: -80px 32px 0px 16px;
+    margin: -80px 26px 32px;
     background: $silver;
     border-radius: 8px;
     text-align: center;
@@ -501,9 +502,9 @@ button:hover{
         }
     }
 
-    .abs {
-        margin: -76px 12px 36px 12px;
-    }
+    // .abs {
+    //     margin: -76px 12px 36px 12px;
+    // }
 
     .section {
 

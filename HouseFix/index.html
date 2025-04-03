@@ -59,7 +59,7 @@
         </div>
     </section>
 
-    <header class="header-main">
+    <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="#">
@@ -176,8 +176,8 @@
                 <h1 class="">The Best Plumbing Service & Maintanence</h1>
             </div>
 
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 service-card-bottom">
+            <div class="row map-container">
+                <!-- <div class="col-lg-4 col-md-6 col-sm-12 service-card-bottom">
                     <div class="card service-card">
                         <img src="assests/img/service0.jpg" class="card-img-top" alt="">
                         <div class="card-body">
@@ -248,7 +248,7 @@
                             <a href="#" class="">Go somewhere <img src="assests/img/Right Arrow.svg" alt=""></a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -287,8 +287,8 @@
                 <h1 class="">Affordable Pricing Plans</h1>
             </div>
 
-            <div class="row">
-                <div class="col-lg-4 col-md-12 pricing-card-bottom">
+            <div class="row pricing-map">
+                <!-- <div class="col-lg-4 col-md-12 pricing-card-bottom">
                     <div class="card pricing-card">
                         <div class="card-body">
                             <h6 class="card-title">Residential Plumbing</h6>
@@ -338,7 +338,7 @@
                             <a href="#" class="pricing-btn">Get Started</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -353,51 +353,93 @@
                 <h1 class="">Our Recent Works</h1>
             </div>
             <div class="d-flex justify-content-center feature-menu overflow-x-auto">
-                <ul class="nav-tabs d-flex gap-5">
-                    <li class="nav-link"><a href="">All Projects</a></li>
-                    <li class="nav-link"><a href="">Commercial Services</a></li>
-                    <li class="nav-link"><a href="">Residential Services</a></li>
-                    <li class="nav-link"><a href="">Emergency Services</a></li>
+                <ul class="nav-tabs nav d-flex gap-5">
+                    <li class="nav-link active" id="link1"><a href="#allproject" data-bs-toggle="tab">All Projects</a></li>
+                    <li class="nav-link" id="link2"><a href="#commercial" data-bs-toggle="tab">Commercial Services</a></li>
+                    <li class="nav-link" id="link3"><a href="#residential" data-bs-toggle="tab">Residential Services</a></li>
+                    <li class="nav-link" id="link4"><a href="#emergency" data-bs-toggle="tab">Emergency Services</a></li>
                 </ul>
-            </div>
+            </div>  
 
-            <div class="row">
-                <div class="col-md-4 col-sm-12 feature-img">
+            <div class="row works-map tab-content">
+                <div class="col-md-4 col-sm-12 feature-img tab-pane fade show active" id="allproject">
                     <img src="assests/img/featureimg1.jpg" alt="" class="featureimg1">
                     <div class="middle">
                         <p class="text">Water Line Repair</p>
                         <span class="">Plumbing</span>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 feature-img">
+                <div class="col-md-4 col-sm-12 feature-img tab-pane fade show active" id="allproject">
                     <img src="assests/img/featureimg2.jpg" alt="">
                     <div class="middle">
                         <p class="text">Water Line Repair</p>
                         <span class="">Plumbing</span>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 feature-img">
+                <div class="col-md-4 col-sm-12 feature-img tab-pane fade show active" id="allproject">
                     <img src="assests/img/featureimg3.jpg" alt="">
                     <div class="middle">
                         <p class="text">Water Line Repair</p>
                         <span class="">Plumbing</span>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 feature-img">
+                <div class="col-md-4 col-sm-12 feature-img tab-pane fade show active" id="allproject">
                     <img src="assests/img/featureimg4.jpg" alt="">
                     <div class="middle">
                         <p class="text">Water Line Repair</p>
                         <span class="">Plumbing</span>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 feature-img">
+                <div class="col-md-4 col-sm-12 feature-img tab-pane fade show active" id="allproject">
                     <img src="assests/img/featureimg5.jpg" alt="">
                     <div class="middle">
                         <p class="text">Water Line Repair</p>
                         <span class="">Plumbing</span>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 feature-img">
+                <div class="col-md-4 col-sm-12 feature-img tab-pane fade show active" id="allproject">
+                    <img src="assests/img/featureimg6.jpg" alt="">
+                    <div class="middle">
+                        <p class="text">Water Line Repair</p>
+                        <span class="">Plumbing</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 feature-img tab-pane fade show " id="emergency">
+                    <img src="assests/img/featureimg6.jpg" alt="">
+                    <div class="middle">
+                        <p class="text">Water Line Repair</p>
+                        <span class="">Plumbing</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 feature-img tab-pane fade show " id="residential">
+                    <img src="assests/img/featureimg6.jpg" alt="">
+                    <div class="middle">
+                        <p class="text">Water Line Repair</p>
+                        <span class="">Plumbing</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 feature-img tab-pane fade show " id="allproject">
+                    <img src="assests/img/featureimg6.jpg" alt="">
+                    <div class="middle">
+                        <p class="text">Water Line Repair</p>
+                        <span class="">Plumbing</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 feature-img tab-pane fade show " id="residential">
+                    <img src="assests/img/featureimg6.jpg" alt="">
+                    <div class="middle">
+                        <p class="text">Water Line Repair</p>
+                        <span class="">Plumbing</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 feature-img tab-pane fade show " id="emergency">
+                    <img src="assests/img/featureimg6.jpg" alt="">
+                    <div class="middle">
+                        <p class="text">Water Line Repair</p>
+                        <span class="">Plumbing</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 feature-img tab-pane fade show " id="commercial">
                     <img src="assests/img/featureimg6.jpg" alt="">
                     <div class="middle">
                         <p class="text">Water Line Repair</p>
@@ -468,7 +510,7 @@
 
             <div class="wrapper">
                 <div class="customer-slider">
-                    <div class="customer-card">
+                    <!-- <div class="customer-card">
                         <div class="star-svg">
                             <i class="fa-solid fa-star" style="color: #388eff;"></i>
                             <i class="fa-solid fa-star" style="color: #388eff;"></i>
@@ -547,7 +589,7 @@
                                 <p>Hotel Manager</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
     </section>
@@ -565,7 +607,7 @@
 
 
             <div class="row blog-card-container">
-                <div class="col-lg-6 col-md-12">
+                <!-- <div class="col-lg-6 col-md-12">
                     <div class="blog-card">
                         <div class="row g-0">
                             <div class="col-md-6">
@@ -652,7 +694,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="text-center pt-3">
                 <a href="" class="button">See More Blogs <img src="assests/img/Arrow-Up-Right.svg" alt=""></a>
@@ -674,7 +716,7 @@
             <div class="row footer-desc">
                 <div class="col-lg-8 col-md-12 first-col">
                     <div class="row">
-                        <div class="col-lg-4 col-md-12 ">
+                        <div class="col-lg-4 col-md-12">
                             <h6>Contact</h6>
                             <p><img src="assests/img/locationlogo.svg" alt="">3249 Henery Street, Kansas <br>67204</p>
                             <a href="mailto:info@template.com"><img src="assests/img/Email.svg" alt="">
@@ -684,8 +726,14 @@
                             <h5>Emergency 24/7 Service</h5>
                             <a href="tel:+1-800-777-584" class="call-red"><img src="assests/img/Call-Red.svg" alt="">
                                 +1-800-777-584</a>
+                            <div class="social-icons">
+                                <a href=""><img src="assests/img/Social-facebook-1.svg" alt=""></a>
+                                <a href=""><img src="assests/img/Social-Instagram.svg" alt=""></a>
+                                <a href=""><img src="assests/img/Social-twitter.svg" alt=""></a>
+                                <a href=""><img src="assests/img/Social-Whatsapp.svg" alt=""></a>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-12">
+                        <div class="col-lg-4 col-md-12 med-col">
                             <h6>Navigation</h6>
                             <a href="">Home</a><br>
                             <a href="">Service</a><br>
@@ -693,7 +741,7 @@
                             <a href="">Our Teams</a><br>
                             <a href="">Contact Us</a>
                         </div>
-                        <div class="col-lg-4 col-md-12">
+                        <div class="col-lg-4 col-md-12 med2-col">
                             <h6>Template</h6>
                             <a href="">404</a><br>
                             <a href="">Login</a><br>
@@ -711,13 +759,6 @@
                 </div>
             </div>
 
-            <div class="social-icons">
-                <a href=""><img src="assests/img/Social-facebook-1.svg" alt=""></a>
-                <a href=""><img src="assests/img/Social-Instagram.svg" alt=""></a>
-                <a href=""><img src="assests/img/Social-twitter.svg" alt=""></a>
-                <a href=""><img src="assests/img/Social-Whatsapp.svg" alt=""></a>
-            </div>
-
             <div class="division">
             </div>
 
@@ -732,15 +773,8 @@
     </footer>
 
 
-
-
-
-
-
-
-
-
-    <script src="script.js"></script>
+    <!-- scripting links -->
+    <script src="assests/script/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -756,6 +790,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
 
+    <!-- slick slider implementation -->
     <script>
         $('.customer-slider').slick({
             dots: true,
@@ -768,7 +803,6 @@
                         slidesToShow: 3,
                         slidesToScroll: 3,
                         infinite: true,
-                        dots: true
                     }
                 },
                 {
@@ -779,7 +813,7 @@
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 700,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1
@@ -787,6 +821,16 @@
                 }
             ]
         });
+
+        // $("#link1").click(function () {
+        //     $('li.active').removeClass('active');
+        //     // $('li').addClass('active');
+        // });
+
+        // $("#link1").click(function () {
+        //     // $('li.active').removeClass('active');
+        //     $('li').addClass('active');
+        // });
     </script>
 </body>
 

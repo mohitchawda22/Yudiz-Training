@@ -3,7 +3,6 @@
   padding: 0%;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  overflow-x: hidden;
 }
 
 img {
@@ -56,12 +55,6 @@ a:hover {
   background: #43A046;
   padding: 1rem 2rem;
   border-radius: 6px;
-}
-
-button:hover {
-  transform: translateY(-5rem);
-  transition: 0.5s all ease-in-out;
-  box-shadow: #43A046 0px 2px 10px 0px;
 }
 
 .slider-desc {
@@ -127,7 +120,7 @@ button:hover {
 }
 
 .member-card {
-  box-shadow: rgba(171, 190, 209, 0.2) 0px 2px 10px 0px;
+  box-shadow: rgba(171, 190, 209, 0.2) 0px 4px 20px 0px;
 }
 .member-card img {
   padding-bottom: 16px;
@@ -247,8 +240,9 @@ button:hover {
 }
 
 .abs {
+  max-width: 317px;
   position: relative;
-  margin: -80px 32px 0px 16px;
+  margin: -80px 26px 32px;
   background: #F5F7FA;
   border-radius: 8px;
   text-align: center;
@@ -405,9 +399,6 @@ button:hover {
     line-height: 18px;
     font-size: 12px;
     padding-top: 8px;
-  }
-  .abs {
-    margin: -76px 12px 36px 12px;
   }
   .section h1 {
     font-size: 36px;

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        margin-top: 50px;
+    }
+    #countdown {
+        font-size: 2em;
+        font-weight: bold;
+        color: red;
+        background: greenyellow;
+    }
+</style>
+<body>
+    <h1>Countdown Timer</h1>
+    <div id="countdown"></div>
+    
+
+<script>
+    function startCountdown(utcDateString) {
+    const targetDate = new Date(utcDateString).getTime();
+    const countdown=document.getElementById("countdown")
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeLeft = targetDate - now;
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            countdown.innerHTML="Countdown ended!";
+            return;
+        }
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        const am=new Date().getHours() >= 12 ? 'PM' : 'AM';
+        // console.log(am)
+        
+        countdown.innerHTML=`Time Left: ${days}d ${hours}h ${minutes}m ${seconds}s ${am}`;
+    }
+
+    const timer = setInterval(updateCountdown, 1000);
+    updateCountdown();
+}
+let londonTime = new Date().toLocaleString("en-US", { timeZone: "Europe/London" });
+        console.log(londonTime);
+
+startCountdown("2025-03-26T13:00:43Z");
+</script>
+</body>
+</html>
