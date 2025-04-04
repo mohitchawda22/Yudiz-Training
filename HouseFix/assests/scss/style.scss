@@ -31,9 +31,9 @@ body {
     overflow-x: hidden;
 }
 
-.container {
-    max-width: 1280px !important
-}
+// .container {
+//     // max-width: 1280px !important
+// }
 
 .dropdown:first-child {
     a {
@@ -55,6 +55,20 @@ body {
     }
 }
 
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s ease-in-out 0.3s;
+}
+
+.dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s ease-in-out 0s;
+}
+
 .navbar-toggler {
     border: none !important
 }
@@ -65,6 +79,12 @@ body {
 
 .navbar-collapse {
     transition: 0.5s all ease-in-out !important;
+}
+
+.close-icon {
+    position: fixed;
+    right: 25px;
+    top: 35px
 }
 
 .contact-banner {
@@ -183,10 +203,12 @@ body {
     border-bottom: 4px solid $primary-300
 }
 
+
 .service-card:hover {
     .card-body {
         background: $primary-500;
-        border-bottom:4px solid $primary-500;
+        border-bottom: 4px solid $primary-500;
+        transition: 0.5s all ease-in-out;
 
         h5 {
             color: $shade-0
@@ -232,6 +254,31 @@ body {
         text-decoration: none
     }
 }
+
+// .border-frame {
+//     position: relative;
+//     text-align: center;
+// }
+
+// .border-frame:before {
+//     content: "";
+//     position: absolute;
+//     width: 431px;
+//     height: 100%;
+//     bottom: -20px;
+//     max-width: 100%;
+//     z-index: -1;
+//     left: 60px;
+//     border: 20px solid #015c01;
+//     // background: $primary-500;
+//     // max-width: 442px;
+//     // max-height: 456px;
+
+//     img {
+//         position: relative;
+//         text-align: center;
+//         // margin: -14px 24px 24px -14px
+//     }
 
 .more-container {
     padding: 100px 0;
@@ -311,7 +358,7 @@ body {
 }
 
 .pricing-card-bottom {
-    padding-bottom: 40px;
+    // padding-bottom: 40px;
 
     .pricing-card {
         padding-bottom: 40px;
@@ -348,11 +395,17 @@ body {
                 padding: 0;
 
                 li {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 18px;
                     padding-bottom: 26px
                 }
             }
 
             .pricing-btn {
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 700;
                 padding: 16px 12px;
                 border: 1px solid $primary-500
             }
@@ -375,21 +428,27 @@ body {
     }
 }
 
-// .pricing-card{
-//     border-top: 4px solid $shade-0;
-//     border-top: 4px solid $shade-0;
-// }
+.pricing-card {
+    border-top: 6px solid $shade-0 !important;
+    border-bottom: 6px solid $shade-0 !important;
+    border-right: none !important;
+    border-left: none !important;
+
+}
 
 .pricing-card:hover {
-    margin-top: -5px;
-    margin-bottom: -5px;
-    border-bottom: 6px solid $primary-500;
-    border-top: 6px solid $primary-500;
+    border-bottom: 6px solid $primary-500 !important;
+    border-top: 6px solid $primary-500 !important;
+    transition: 0.5s all ease-in-out;
+    // margin-top: -5px;
+    // margin-bottom: -5px;
+    // border-bottom: 6px solid $primary-500;
+    // border-top: 6px solid $primary-500;
 
     .pricing-btn {
         color: $shade-0;
         background: $primary-500;
-        transition: .3s all ease-in-out
+        transition: .5s all ease-in-out
     }
 }
 
@@ -483,10 +542,20 @@ body {
     }
 }
 
+.tabbable .nav-tabs {
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+}
+
+.tabbable .nav-tabs .nav-link {
+    white-space: nowrap;
+}
+
 .nav-link.active {
     background: transparent !important;
-    color: white !important;
-    border-bottom: 2px solid $primary-500 !important;
+    color: $primary-800 !important;
+    border-bottom: 4px solid $primary-500 !important;
 }
 
 .year-container {
@@ -755,7 +824,9 @@ body {
             @include p3;
             font-weight: 400;
             color: $shade-0;
-            padding-bottom: 8px
+            padding-bottom: 8px;
+            
+            
         }
 
         h5 {
@@ -830,6 +901,9 @@ body {
 }
 
 @media(min-width:768px) and (max-width:991px) {
+    .navbar-nav{
+        margin-top: 5rem;
+    }
     .hero-container {
         text-align: center;
 
@@ -888,7 +962,7 @@ body {
     }
 
     .pricing-card-bottom {
-        padding: 0 32px
+        padding-bottom: 40px;
     }
 
     .year-container {
@@ -922,6 +996,9 @@ body {
 }
 
 @media (min-width:320px) and (max-width:767px) {
+    .navbar-nav{
+        margin-top: 5rem;
+    }
     .contact-banner {
         display: none
     }
@@ -998,6 +1075,10 @@ body {
         }
     }
 
+    .pricing-card-bottom {
+        padding-bottom: 40px;
+    }
+
     .year-container {
         .year-container-desc {
             h1 {
@@ -1025,6 +1106,16 @@ body {
 
     .med-col {
         padding: 40px 0px;
+    }
+
+    .footer-last-desc{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        div{
+            text-align: center;
+            justify-content: space-evenly;
+        }
     }
 }
 
@@ -1057,8 +1148,8 @@ body {
         display: none
     }
 
-    .dropdown:hover .dropdown-menu {
+    .nav-item:hover .dropdown-menu {
         display: block;
-        margin-top: 0
+        margin-top: 0;
     }
 }

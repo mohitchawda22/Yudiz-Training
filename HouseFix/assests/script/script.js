@@ -2,11 +2,11 @@
 
 const items = [
     { id: 1, img1: "assests/img/service0.jpg", img2: 'assests/img/Pipe-Installation.svg', title: 'Plumbing Installation' },
-    { id: 2, img1: "assests/img/service2.jpg", img2: 'assests/img/Pipe-Plumbing.svg', title: 'Plumbing Installation' },
-    { id: 3, img1: "assests/img/service3.jpg", img2: 'assests/img/servicelogo.svg', title: 'Plumbing Installation' },
-    { id: 4, img1: "assests/img/service4.jpg", img2: 'assests/img/pipelogo.svg', title: 'Plumbing Installation' },
-    { id: 5, img1: "assests/img/service5.jpg", img2: 'assests/img/Pipe-Line.svg', title: 'Plumbing Installation' },
-    { id: 6, img1: "assests/img/service6.jpg", img2: 'assests/img/plunglogo.svg', title: 'Plumbing Installation' },
+    { id: 2, img1: "assests/img/service2.jpg", img2: 'assests/img/Pipe-Plumbing.svg', title: 'General Plumbing' },
+    { id: 3, img1: "assests/img/service3.jpg", img2: 'assests/img/servicelogo.svg', title: 'Plumbing Maintanence ' },
+    { id: 4, img1: "assests/img/service4.jpg", img2: 'assests/img/pipelogo.svg', title: 'Fixing Pipes' },
+    { id: 5, img1: "assests/img/service5.jpg", img2: 'assests/img/Pipe-Line.svg', title: 'Plumbing Line Consultation' },
+    { id: 6, img1: "assests/img/service6.jpg", img2: 'assests/img/plunglogo.svg', title: 'Drain Cleaning    ' },
 ];
 
 const mapContainer = document.getElementsByClassName("map-container")[0]
@@ -150,7 +150,7 @@ const blogCard=blogItems.map(item=>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="body h-100">
+                                <div class="body h-100 w-100">
                                     <h5 class="title">${item.title}</h5>
                                     <p class="date"><img src="assests/img/Calendar.svg" alt="" class=""> January 4, 2022
                                     </p>
