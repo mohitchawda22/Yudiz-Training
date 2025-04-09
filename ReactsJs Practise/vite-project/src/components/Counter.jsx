@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 
-
 class Counter extends Component {
 
     componentDidUpdate(prevprops){
@@ -9,7 +8,6 @@ class Counter extends Component {
             console.log(prevprops.number);
             console.log("component Updated....");
             console.log(this.props.number);
-            
         }
     }
 

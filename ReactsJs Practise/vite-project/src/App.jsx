@@ -6,7 +6,7 @@ class App extends Component{
   constructor(){
     super()
     this.state={
-      count:0
+      age:0
     }
   }
 
@@ -16,7 +16,7 @@ class App extends Component{
 
   Increment=()=>{
     this.setState({
-      count:this.state.count+1
+      age:this.state.age+1
     });
   }
 
@@ -27,10 +27,10 @@ class App extends Component{
 render() {
   return (
     <>
+      <Counter number={this.state.age}></Counter>
       <button onClick={()=>this.Increment()}>
       Increment age
       </button>
-      <Counter number={this.state.count}></Counter>
     </>
   );
 }
