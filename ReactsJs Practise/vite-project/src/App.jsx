@@ -1,22 +1,36 @@
 import { Component } from "react";
+import Counter from "./components/Counter";
 
 class App extends Component{
-  state={
-    age:42
+
+  constructor(){
+    super()
+    this.state={
+      count:0
+    }
   }
 
-  handleAge=()=>{
+  componentDidMount(){
+    console.log("Component Mounted......"); 
+  }
+
+  Increment=()=>{
     this.setState({
-    age:this.state.age+1
-  });
-}
+      count:this.state.count+1
+    });
+  }
+
+  componentWillUnmount(){
+    console.log("component Will Unmounted.......Removed");
+  }
+
 render() {
   return (
     <>
-      <button onClick={this.handleAge}>
+      <button onClick={()=>this.Increment()}>
       Increment age
       </button>
-      <p>You are {this.state.age}.</p>
+      <Counter number={this.state.count}></Counter>
     </>
   );
 }
