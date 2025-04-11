@@ -40,3 +40,33 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.check{
+  text-decoration: line-through;
+  color: red;
+  background: green
+;
+}
+
+
+li{
+  list-style: none;
+  background: grey;
+  margin: 10px;
+}
+.form{
+  display: flex;
+  gap: 20px;
+}
+
+.input{
+  display: flex;
+  flex-basis: 80%;
+  color: white;
+  background: grey;
+}
+.btn{
+  display: flex;
+  flex-basis: 20%;
+}
