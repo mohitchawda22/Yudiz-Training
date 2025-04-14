@@ -1,0 +1,15 @@
+{
+  "name": "eslint",
+  "version": "1.0.0",
+  "description": "its the demo project to practise eslint",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js",
+    "fix": "eslint . --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "file:"
+  }
+}
